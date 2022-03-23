@@ -1,0 +1,20 @@
+PODS:
+  - Macaw (0.9.9):
+    - SWXMLHash
+  - SWXMLHash (6.0.0)
+
+DEPENDENCIES:
+  - Macaw
+
+SPEC REPOS:
+  trunk:
+    - Macaw
+    - SWXMLHash
+
+SPEC CHECKSUMS:
+  Macaw: d683339ff44d49c16776ec2bde7aecfd4ba2a3a4
+  SWXMLHash: 9d851ed3edf48ec2bd0db98f0cda0ad4136d75e3
+
+PODFILE CHECKSUM: 4317300f76e489739aa67909284950b18ac5ace3
+
+COCOAPODS: 1.11.3

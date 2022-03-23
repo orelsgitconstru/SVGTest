@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90F4AF2727C265C700B5CA5D /* SVGControllerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4AF2627C265C700B5CA5D /* SVGControllerApp.swift */; };
-		90F4AF2927C265C700B5CA5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4AF2827C265C700B5CA5D /* ContentView.swift */; };
+		90CC837627EB7A34001183B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC836F27EB7A33001183B5 /* ContentView.swift */; };
+		90CC837727EB7A34001183B5 /* SVGClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837027EB7A33001183B5 /* SVGClass.swift */; };
+		90CC837827EB7A34001183B5 /* SVGMacawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837127EB7A33001183B5 /* SVGMacawView.swift */; };
+		90CC837927EB7A34001183B5 /* SVGControllerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837227EB7A33001183B5 /* SVGControllerApp.swift */; };
+		90CC837A27EB7A34001183B5 /* SVGViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837327EB7A33001183B5 /* SVGViewModel.swift */; };
+		90CC837B27EB7A34001183B5 /* UISVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837427EB7A34001183B5 /* UISVGView.swift */; };
+		90CC837C27EB7A34001183B5 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837527EB7A34001183B5 /* SVGView.swift */; };
+		90CC837E27EB7A69001183B5 /* svg-donut.svg in Resources */ = {isa = PBXBuildFile; fileRef = 90CC837D27EB7A69001183B5 /* svg-donut.svg */; };
+		90CC838027EB7A92001183B5 /* S1vgTest.svg in Resources */ = {isa = PBXBuildFile; fileRef = 90CC837F27EB7A92001183B5 /* S1vgTest.svg */; };
+		90CC838227EB7B77001183B5 /* SvgTest.svg in Resources */ = {isa = PBXBuildFile; fileRef = 90CC838127EB7B77001183B5 /* SvgTest.svg */; };
 		90F4AF2B27C265C800B5CA5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F4AF2A27C265C800B5CA5D /* Assets.xcassets */; };
 		90F4AF2E27C265C800B5CA5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F4AF2D27C265C800B5CA5D /* Preview Assets.xcassets */; };
+		D548BB810342C5D13A031BD8 /* Pods_SVGController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF60F0A62EFC3D54A89775FB /* Pods_SVGController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2942FC019536B4EEE3E7DB03 /* Pods-SVGController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVGController.debug.xcconfig"; path = "Target Support Files/Pods-SVGController/Pods-SVGController.debug.xcconfig"; sourceTree = "<group>"; };
+		90CC836F27EB7A33001183B5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../../Downloads/SVGController-main/ContentView.swift"; sourceTree = "<group>"; };
+		90CC837027EB7A33001183B5 /* SVGClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGClass.swift; sourceTree = "<group>"; };
+		90CC837127EB7A33001183B5 /* SVGMacawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGMacawView.swift; sourceTree = "<group>"; };
+		90CC837227EB7A33001183B5 /* SVGControllerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGControllerApp.swift; path = "../../../../Downloads/SVGController-main/SVGControllerApp.swift"; sourceTree = "<group>"; };
+		90CC837327EB7A33001183B5 /* SVGViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGViewModel.swift; sourceTree = "<group>"; };
+		90CC837427EB7A34001183B5 /* UISVGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISVGView.swift; sourceTree = "<group>"; };
+		90CC837527EB7A34001183B5 /* SVGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGView.swift; sourceTree = "<group>"; };
+		90CC837D27EB7A69001183B5 /* svg-donut.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "svg-donut.svg"; sourceTree = "<group>"; };
+		90CC837F27EB7A92001183B5 /* S1vgTest.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = S1vgTest.svg; sourceTree = "<group>"; };
+		90CC838127EB7B77001183B5 /* SvgTest.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SvgTest.svg; sourceTree = "<group>"; };
 		90F4AF2327C265C700B5CA5D /* SVGController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		90F4AF2627C265C700B5CA5D /* SVGControllerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGControllerApp.swift; sourceTree = "<group>"; };
-		90F4AF2827C265C700B5CA5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90F4AF2A27C265C800B5CA5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90F4AF2D27C265C800B5CA5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF60F0A62EFC3D54A89775FB /* Pods_SVGController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVGController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E491218B7CD064C3372EE45A /* Pods-SVGController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVGController.release.xcconfig"; path = "Target Support Files/Pods-SVGController/Pods-SVGController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +46,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D548BB810342C5D13A031BD8 /* Pods_SVGController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66B8D50F78721BCC284C6B66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF60F0A62EFC3D54A89775FB /* Pods_SVGController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90F4AF1A27C265C700B5CA5D = {
 			isa = PBXGroup;
 			children = (
 				90F4AF2527C265C700B5CA5D /* SVGController */,
 				90F4AF2427C265C700B5CA5D /* Products */,
+				B300A397886CA5C3339B7C0D /* Pods */,
+				66B8D50F78721BCC284C6B66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +82,16 @@
 		90F4AF2527C265C700B5CA5D /* SVGController */ = {
 			isa = PBXGroup;
 			children = (
-				90F4AF2627C265C700B5CA5D /* SVGControllerApp.swift */,
-				90F4AF2827C265C700B5CA5D /* ContentView.swift */,
+				90CC837D27EB7A69001183B5 /* svg-donut.svg */,
+				90CC837F27EB7A92001183B5 /* S1vgTest.svg */,
+				90CC838127EB7B77001183B5 /* SvgTest.svg */,
+				90CC836F27EB7A33001183B5 /* ContentView.swift */,
+				90CC837027EB7A33001183B5 /* SVGClass.swift */,
+				90CC837227EB7A33001183B5 /* SVGControllerApp.swift */,
+				90CC837127EB7A33001183B5 /* SVGMacawView.swift */,
+				90CC837527EB7A34001183B5 /* SVGView.swift */,
+				90CC837327EB7A33001183B5 /* SVGViewModel.swift */,
+				90CC837427EB7A34001183B5 /* UISVGView.swift */,
 				90F4AF2A27C265C800B5CA5D /* Assets.xcassets */,
 				90F4AF2C27C265C800B5CA5D /* Preview Content */,
 			);
@@ -67,6 +106,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B300A397886CA5C3339B7C0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2942FC019536B4EEE3E7DB03 /* Pods-SVGController.debug.xcconfig */,
+				E491218B7CD064C3372EE45A /* Pods-SVGController.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90F4AF3127C265C800B5CA5D /* Build configuration list for PBXNativeTarget "SVGController" */;
 			buildPhases = (
+				FF30A6B621763A185AABADC8 /* [CP] Check Pods Manifest.lock */,
 				90F4AF1F27C265C700B5CA5D /* Sources */,
 				90F4AF2027C265C700B5CA5D /* Frameworks */,
 				90F4AF2127C265C700B5CA5D /* Resources */,
+				398C180BDD5DD3134ECFD613 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +175,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90CC837E27EB7A69001183B5 /* svg-donut.svg in Resources */,
+				90CC838227EB7B77001183B5 /* SvgTest.svg in Resources */,
+				90CC838027EB7A92001183B5 /* S1vgTest.svg in Resources */,
 				90F4AF2E27C265C800B5CA5D /* Preview Assets.xcassets in Resources */,
 				90F4AF2B27C265C800B5CA5D /* Assets.xcassets in Resources */,
 			);
@@ -132,13 +185,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		398C180BDD5DD3134ECFD613 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SVGController/Pods-SVGController-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SVGController/Pods-SVGController-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SVGController/Pods-SVGController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF30A6B621763A185AABADC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SVGController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90F4AF1F27C265C700B5CA5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90F4AF2927C265C700B5CA5D /* ContentView.swift in Sources */,
-				90F4AF2727C265C700B5CA5D /* SVGControllerApp.swift in Sources */,
+				90CC837A27EB7A34001183B5 /* SVGViewModel.swift in Sources */,
+				90CC837B27EB7A34001183B5 /* UISVGView.swift in Sources */,
+				90CC837827EB7A34001183B5 /* SVGMacawView.swift in Sources */,
+				90CC837627EB7A34001183B5 /* ContentView.swift in Sources */,
+				90CC837C27EB7A34001183B5 /* SVGView.swift in Sources */,
+				90CC837927EB7A34001183B5 /* SVGControllerApp.swift in Sources */,
+				90CC837727EB7A34001183B5 /* SVGClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +363,7 @@
 		};
 		90F4AF3227C265C800B5CA5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2942FC019536B4EEE3E7DB03 /* Pods-SVGController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +393,7 @@
 		};
 		90F4AF3327C265C800B5CA5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E491218B7CD064C3372EE45A /* Pods-SVGController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
