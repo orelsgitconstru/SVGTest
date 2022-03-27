@@ -6,6 +6,7 @@ target 'SVGController' do
   use_frameworks!
 
   pod "Macaw"
+
   # Pods for SVGController
 
 end

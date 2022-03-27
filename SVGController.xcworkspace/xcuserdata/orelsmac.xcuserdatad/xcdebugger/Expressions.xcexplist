@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SVGMacawView.init(fileName:frame:):SVGMacawView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "xml.children[0].children[0].map{$0.element?.allAttributes}">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SVGViewModel.update():SVGViewModel.swift">
          <PersistentStrings>
             <PersistentString
