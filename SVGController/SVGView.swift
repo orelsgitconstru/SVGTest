@@ -11,19 +11,14 @@ import Macaw
 import SWXMLHash
 
 struct SVGView: UIViewRepresentable {
-    
     var fileName: String
-    var wrapper: SVGViewWrapper
+    var wrapper: SVGViewModel
     
     func makeUIView(context: Context) -> SVGMacawView {
         SVGMacawView(fileName: fileName, wrapper: wrapper)
     }
 
-    func updateUIView(_ uiView: SVGMacawView, context: Context) {
-        for coloredNodeGUID in wrapper.coloredNodes {
-            uiView.colorNode(guid: coloredNodeGUID)
-        }
-    }
+    func updateUIView(_ uiView: SVGMacawView, context: Context) {}
 }
 
 
@@ -33,11 +28,12 @@ internal class SVGMacawView: MacawView {
         static let attributeName = "guid"
     }
     
-    var wrapper: SVGViewWrapper
-    
     private var guids = [String]()
     
-    init(fileName: String, wrapper: SVGViewWrapper) {
+    var wrapper: SVGViewModel
+
+    
+    init(fileName: String, wrapper: SVGViewModel) {
         self.wrapper = wrapper
         super.init(frame : UIScreen.main.bounds)
         if let node = try? SVGParser.parse(resource: fileName, ofType: Constants.svgExtension, inDirectory: nil, fromBundle: Bundle.main) {
@@ -46,8 +42,7 @@ internal class SVGMacawView: MacawView {
                 if let xmlString = try? String(contentsOf: url) {
                     let xml = XMLHash.parse(xmlString)
                     enumerate(indexer: xml, level: 0)
-                    let noDuplicates = guids
-                    for case let element in noDuplicates {
+                    for case let element in guids {
                         self.setNodeAttributes(id: element)
                     }
                 }
@@ -63,7 +58,7 @@ internal class SVGMacawView: MacawView {
             if let element = child.element {
                 if let idAttribute = element.attribute(by: Constants.attributeName) {
                     let guid = idAttribute.text
-                    if !guids.contains(guid) {
+                    if !guids.contains(guid) { // guid is the id of each shape in the svg
                         guids.append(guid)
                     }
                 }
@@ -74,9 +69,9 @@ internal class SVGMacawView: MacawView {
     
     private func setNodeAttributes(id : String) {
         let node = self.node.nodeBy(tag: id)
-        if !wrapper.svgNodes.keys.contains(id){
-            wrapper.svgNodes[id] = node
-        }
+//        if !wrapper.svgNodes.keys.contains(id){
+//            wrapper.svgNodes[id] = node
+//        }
         if wrapper.coloredNodes.contains(id) {
             (node as! Macaw.Shape).fill = Color.hotPink
         }
@@ -93,4 +88,23 @@ internal class SVGMacawView: MacawView {
     @objc required convenience init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+internal class SVGViewModel: ObservableObject {
+    
+    var coloredNodes: [String] = [String](["2$EuNBdQLC5BiPtCApWDUN", "2RKZjX6N5Bd871L82NgxWj"]) // Publisher
+    // var pressedNode Publisher
+//    var svgNodes = [String: Node]()
+//
+//    func update(){
+//        for (guid, node) in svgNodes {
+//            if(coloredNodes.contains(guid)){
+//                if((node as! Shape).fill != Color.red){
+//                    (node as! Shape).fill = Color.red
+//                } else{
+//                    (node as! Shape).fill = Color.rgba(r: 231, g: 81, b: 99, a: 0.1)
+//                }
+//            }
+//        }
+//    }
 }
