@@ -21,5 +21,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "SVGMacawView.setNodeAttributes(id:):SVGMacawView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "wrapper">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

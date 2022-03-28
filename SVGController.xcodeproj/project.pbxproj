@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		90CC837627EB7A34001183B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC836F27EB7A33001183B5 /* ContentView.swift */; };
-		90CC837827EB7A34001183B5 /* SVGMacawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837127EB7A33001183B5 /* SVGMacawView.swift */; };
 		90CC837927EB7A34001183B5 /* SVGControllerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837227EB7A33001183B5 /* SVGControllerApp.swift */; };
-		90CC837A27EB7A34001183B5 /* SVGViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837327EB7A33001183B5 /* SVGViewModel.swift */; };
+		90CC837A27EB7A34001183B5 /* SVGViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837327EB7A33001183B5 /* SVGViewWrapper.swift */; };
 		90CC837C27EB7A34001183B5 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC837527EB7A34001183B5 /* SVGView.swift */; };
 		90CC838227EB7B77001183B5 /* SvgTest.svg in Resources */ = {isa = PBXBuildFile; fileRef = 90CC838127EB7B77001183B5 /* SvgTest.svg */; };
 		90F4AF2B27C265C800B5CA5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F4AF2A27C265C800B5CA5D /* Assets.xcassets */; };
@@ -21,9 +20,8 @@
 /* Begin PBXFileReference section */
 		2942FC019536B4EEE3E7DB03 /* Pods-SVGController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVGController.debug.xcconfig"; path = "Target Support Files/Pods-SVGController/Pods-SVGController.debug.xcconfig"; sourceTree = "<group>"; };
 		90CC836F27EB7A33001183B5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../../Downloads/SVGController-main/ContentView.swift"; sourceTree = "<group>"; };
-		90CC837127EB7A33001183B5 /* SVGMacawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGMacawView.swift; sourceTree = "<group>"; };
 		90CC837227EB7A33001183B5 /* SVGControllerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGControllerApp.swift; path = "../../../../Downloads/SVGController-main/SVGControllerApp.swift"; sourceTree = "<group>"; };
-		90CC837327EB7A33001183B5 /* SVGViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGViewModel.swift; sourceTree = "<group>"; };
+		90CC837327EB7A33001183B5 /* SVGViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGViewWrapper.swift; sourceTree = "<group>"; };
 		90CC837527EB7A34001183B5 /* SVGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGView.swift; sourceTree = "<group>"; };
 		90CC838127EB7B77001183B5 /* SvgTest.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SvgTest.svg; sourceTree = "<group>"; };
 		90F4AF2327C265C700B5CA5D /* SVGController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,9 +75,8 @@
 				90CC838127EB7B77001183B5 /* SvgTest.svg */,
 				90CC836F27EB7A33001183B5 /* ContentView.swift */,
 				90CC837227EB7A33001183B5 /* SVGControllerApp.swift */,
-				90CC837127EB7A33001183B5 /* SVGMacawView.swift */,
 				90CC837527EB7A34001183B5 /* SVGView.swift */,
-				90CC837327EB7A33001183B5 /* SVGViewModel.swift */,
+				90CC837327EB7A33001183B5 /* SVGViewWrapper.swift */,
 				90F4AF2A27C265C800B5CA5D /* Assets.xcassets */,
 				90F4AF2C27C265C800B5CA5D /* Preview Content */,
 			);
@@ -218,8 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CC837A27EB7A34001183B5 /* SVGViewModel.swift in Sources */,
-				90CC837827EB7A34001183B5 /* SVGMacawView.swift in Sources */,
+				90CC837A27EB7A34001183B5 /* SVGViewWrapper.swift in Sources */,
 				90CC837627EB7A34001183B5 /* ContentView.swift in Sources */,
 				90CC837C27EB7A34001183B5 /* SVGView.swift in Sources */,
 				90CC837927EB7A34001183B5 /* SVGControllerApp.swift in Sources */,

@@ -7,18 +7,13 @@
 import Foundation
 import Macaw
 
-class SVGViewModel: ObservableObject{
+class SVGViewWrapper {
     
-    static let shared = SVGViewModel()
     var coloredNodes: [String] = [String](["2$EuNBdQLC5BiPtCApWDUN", "2RKZjX6N5Bd871L82NgxWj"])
     var svgView: SVGView {
-        SVGView(fileName: "SvgTest", coloredNodesGUIDs: coloredNodes)
+        SVGView(fileName: "SvgTest", wrapper: self)
     }
     var svgNodes = [String: Node]()
-    
-    init() {
-        update()
-    }
     
     func update(){
         for (guid, node) in svgNodes {
