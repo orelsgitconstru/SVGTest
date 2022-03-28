@@ -9,32 +9,48 @@ import SwiftUI
 import UIKit
 import Macaw
 import SWXMLHash
+import Combine
 
-struct SVGView: UIViewRepresentable {
+class MyLayout: ContentLayout {
+
+    override func layout(rect: Rect, into sizeToFitIn: Size) -> Transform {
+        // scale scene to fit view bounds
+        return Transform.scale(sx: (sizeToFitIn.w / rect.w) + 0.1, sy: sizeToFitIn.h / rect.h + 0.2)
+//            .move(dx: -30, dy: 0)
+            // rotate scene upside down around the center
+//            .rotate(angle: 180, x: rect.center().x, y: rect.center().y)
+    }
+}
+
+struct SVGViewWrapper: UIViewRepresentable {
     var fileName: String
     var wrapper: SVGViewModel
     
-    func makeUIView(context: Context) -> SVGMacawView {
-        SVGMacawView(fileName: fileName, wrapper: wrapper)
+    func makeUIView(context: Context) -> SVGView {
+        let view = SVGView(fileName: fileName, wrapper: wrapper)
+        view.contentMode = .scaleAspectFit
+//        view.contentLayout = MyLayout()
+        return view
     }
 
-    func updateUIView(_ uiView: SVGMacawView, context: Context) {}
+    func updateUIView(_ uiView: SVGView, context: Context) {}
 }
 
 
-internal class SVGMacawView: MacawView {
+internal class SVGView: MacawView {
     private struct Constants {
         static let svgExtension = "svg"
         static let attributeName = "guid"
     }
     
     private var guids = [String]()
+    private var anyCancellables: [AnyCancellable] = []
     
-    var wrapper: SVGViewModel
-
+    var viewModel: SVGViewModel
+    
     
     init(fileName: String, wrapper: SVGViewModel) {
-        self.wrapper = wrapper
+        self.viewModel = wrapper
         super.init(frame : UIScreen.main.bounds)
         if let node = try? SVGParser.parse(resource: fileName, ofType: Constants.svgExtension, inDirectory: nil, fromBundle: Bundle.main) {
             self.node = node
@@ -68,13 +84,19 @@ internal class SVGMacawView: MacawView {
     }
     
     private func setNodeAttributes(id : String) {
+        viewModel.coloredNodes.sink { coloredNodes in
+            for guid in coloredNodes {
+                let node = self.node.nodeBy(tag: guid)
+                (node as? Macaw.Shape)?.fill = Color.blue
+            }
+        }.store(in: &anyCancellables)
         let node = self.node.nodeBy(tag: id)
-//        if !wrapper.svgNodes.keys.contains(id){
+//        if !wrapper.svgNodes.keys.contains(id) {
 //            wrapper.svgNodes[id] = node
 //        }
-        if wrapper.coloredNodes.contains(id) {
-            (node as! Macaw.Shape).fill = Color.hotPink
-        }
+//        if viewModel.coloredNodes1.contains(id) {
+//            (node as! Macaw.Shape).fill = Color.hotPink
+//        }
         node?.onTouchPressed({ (touch) in
             (node as! Macaw.Shape).fill = Color.darkRed
         })
@@ -92,7 +114,8 @@ internal class SVGMacawView: MacawView {
 
 internal class SVGViewModel: ObservableObject {
     
-    var coloredNodes: [String] = [String](["2$EuNBdQLC5BiPtCApWDUN", "2RKZjX6N5Bd871L82NgxWj"]) // Publisher
+//    var coloredNodes1: [String] = [String](["2$EuNBdQLC5BiPtCApWDUN", "2RKZjX6N5Bd871L82NgxWj"]) // Publisher
+    var coloredNodes: AnyPublisher<[String], Never> = CurrentValueSubject([]).eraseToAnyPublisher()
     // var pressedNode Publisher
 //    var svgNodes = [String: Node]()
 //
