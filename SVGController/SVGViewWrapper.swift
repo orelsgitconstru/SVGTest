@@ -14,11 +14,11 @@ import Combine
 class MyLayout: ContentLayout {
 
     override func layout(rect: Rect, into sizeToFitIn: Size) -> Transform {
-        // scale scene to fit view bounds
-        return Transform.scale(sx: (sizeToFitIn.w / rect.w) + 0.1, sy: sizeToFitIn.h / rect.h + 0.2)
-//            .move(dx: -30, dy: 0)
-            // rotate scene upside down around the center
-//            .rotate(angle: 180, x: rect.center().x, y: rect.center().y)
+        print(sizeToFitIn)
+        print(rect.w)
+        print(rect.h)
+        return Transform.scale(sx: (sizeToFitIn.w / rect.w), sy: sizeToFitIn.h / rect.h)
+            .move(dx: -30, dy: 0)
     }
 }
 
@@ -115,7 +115,7 @@ internal class SVGView: MacawView {
 internal class SVGViewModel: ObservableObject {
     
 //    var coloredNodes1: [String] = [String](["2$EuNBdQLC5BiPtCApWDUN", "2RKZjX6N5Bd871L82NgxWj"]) // Publisher
-    var coloredNodes: AnyPublisher<[String], Never> = CurrentValueSubject([]).eraseToAnyPublisher()
+    var coloredNodes: AnyPublisher<[String], Never> = CurrentValueSubject(["2$EuNBdQLC5BiPtCApWDUN", "2RKZjX6N5Bd871L82NgxWj"]).eraseToAnyPublisher()
     // var pressedNode Publisher
 //    var svgNodes = [String: Node]()
 //
